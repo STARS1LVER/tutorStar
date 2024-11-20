@@ -21,9 +21,7 @@ public class UserController {
 
 
     public List<UserDto> getAllUsers() {
-
         List<User> users = userService.getAllUsers();
-
         return users.stream()
                 .map(UserMapper.INSTANCE::userToUserDto)
                 .collect( Collectors.toList());
