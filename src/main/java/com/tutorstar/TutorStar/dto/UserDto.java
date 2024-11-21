@@ -7,18 +7,28 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
-@Data // Genera getters, setters, equals, hashCode y toString
-@NoArgsConstructor // Constructor sin argumentos
-@AllArgsConstructor // Constructor con todos los argumentos
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserDto {
-    private Long id; // Identificador único del usuario
-    private String name; // Nombre del usuario
-    private String lastName; // Apellido del usuario
-    private String email; // Correo electrónico
-    private int semester; // Semestre del usuario
-    private String modality; // Modalidad de estudio
-    private String career; // Carrera del usuario
-    private LocalDateTime createdAt; // Fecha de creación
-    private LocalDateTime updatedAt; // Fecha de última actualización
+    private Long id;
+    private String name;
+    private String lastName;
+    private String email;
+    private int semester;
+    private String modality;
+    private String career;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
+    private String password; // Agrega este campo
+
+    // Getters y setters para password
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
